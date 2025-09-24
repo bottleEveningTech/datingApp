@@ -9,7 +9,7 @@ import { Component, inject, OnInit, signal } from '@angular/core';
 })
 export class App implements OnInit{
   protected readonly title = 'Dating App';
-  protected members: any;
+  protected members = signal<any>([]);
   /*
     zone less change detection for angular 20
    protected members = signal<any>([]); fine grained change detection
